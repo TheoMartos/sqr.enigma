@@ -7,6 +7,14 @@ public class Machine {
 	private Rotor rightRotor;
 	private Reflector reflector;
 
+	/**
+	 * Initialize the instance's rotor attributes
+	 *
+	 * @param reflector
+	 * @param left
+	 * @param middle
+	 * @param right
+	 */
 	public void initRotors(Reflector reflector, Rotor left, Rotor middle, Rotor right) {
 		this.reflector = reflector;
 		leftRotor = left;
@@ -14,6 +22,11 @@ public class Machine {
 		rightRotor = right;
 	}
 
+	/**
+	 * Initialize rotors and relfectors positions from the setting string
+	 *
+	 * @param setting
+	 */
 	public void setPositions(String setting) {
 		char[] charSettings = setting.toCharArray();
 		reflector.setPosition(Rotor.toIndex(charSettings[0]));
@@ -21,13 +34,27 @@ public class Machine {
 		middleRotor.setPosition(Rotor.toIndex(charSettings[2]));
 		rightRotor.setPosition(Rotor.toIndex(charSettings[3]));
 	}
-	
+
+	/**
+	 * Launch the previous methods the intialize the machine's rotors and apply the setting string
+	 *
+	 * @param reflector
+	 * @param left
+	 * @param middle
+	 * @param right
+	 * @param setting
+	 */
 	public void configure(Reflector reflector, Rotor left, Rotor middle, Rotor right, String setting) {
 		this.initRotors(reflector, left, middle, right);
 		this.setPositions(setting);
-
 	}
 
+	/**
+	 * Convert a string with Enigma
+	 *
+	 * @param msg
+	 * @return
+	 */
 	public String convert(String msg) {
 		msg = msg.toUpperCase();
 		char[] msgChars = msg.toCharArray();
@@ -35,9 +62,16 @@ public class Machine {
 		for (char c : msgChars) {
 			result += convertChar(c);
 		}
+
 		return result;
 	}
 
+	/**
+	 * Convert a char by passing it thought the 3 rotors forward, the reflector, and back again in the 3 rotors backward
+	 *
+	 * @param c
+	 * @return
+	 */
 	char convertChar(char c) {
 		advanceRotors();
 		int charIndex = Rotor.toIndex(c);

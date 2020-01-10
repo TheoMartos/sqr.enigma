@@ -40,8 +40,7 @@ public final class Main {
 
 	public static void main(String[] unused) {
 		Machine M = new Machine();
-		BufferedReader input = new BufferedReader(new InputStreamReader(
-				System.in));		
+		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
 		try {
 			while (true) {
@@ -230,5 +229,4 @@ public final class Main {
 		reflectorC = Reflector
 				.reflectorFactory("F V P J I A O Y E D R Z X W G C T K U Q S B N M H L");
 	}
-
 }
