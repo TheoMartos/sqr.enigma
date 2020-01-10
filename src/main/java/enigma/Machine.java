@@ -84,7 +84,6 @@ public class Machine {
 		output = middleRotor.convertBackward(output);
 		output = rightRotor.convertBackward(output);
 		return Rotor.toLetter(output);
-
 	}
 
 	void advanceRotors() {

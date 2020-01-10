@@ -43,6 +43,6 @@ public class Reflector extends Rotor {
 
     @Override
     public void advance() {
-    }
 
+    }
 }

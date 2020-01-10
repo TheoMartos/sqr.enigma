@@ -44,7 +44,6 @@ public class Rotor {
 		} else {
 			return new Rotor(cipher, toIndex(s[0]));
 		}
-		
 	}
 	
 	private Rotor(int[] c, int notch1, int notch2) {

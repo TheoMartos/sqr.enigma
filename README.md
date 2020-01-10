@@ -17,14 +17,19 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
-- 
-- 
+- convert : validation test -> done
+- convertChar : tested by inspection + alredy tested in convert -> no need
 
 ### Classe Reflector
 #### function
+- convertForward
 
 ### Classe Rotor
 #### function
+- advance : check that the position is well incrementing and the position values are between 0 and 25
+- rotorFactory
+- convertForward ?
+- convertBackward ?
 
 ## Tricks & tips
 
