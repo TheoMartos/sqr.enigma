@@ -17,6 +17,8 @@ Hereafter, for each classes give function to be tested
 
 ### Classe Machine
 #### functions
+- 
+- 
 
 ### Classe Reflector
 #### function

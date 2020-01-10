@@ -9,7 +9,7 @@ public class Rotor {
     private int notch2 = -1;
 
 	/**
-	 * Reder for the position
+	 * Reader for the position
 	 *
 	 * @return position
 	 */
